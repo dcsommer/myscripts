@@ -28,10 +28,6 @@
 (show-paren-mode 1)
 (setq show-paren-delay 0)
 
-; enable matlab mode
-(load "~/Documents/myscripts/emacs/matlab")
-(setq auto-mode-alist (cons '("\\.m$" . matlab-mode) auto-mode-alist))
-
 ; turn off menubar and toolbar
 (menu-bar-mode -1)
 (tool-bar-mode -1)

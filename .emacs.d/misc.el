@@ -31,3 +31,6 @@
 ; turn off menubar and toolbar
 (menu-bar-mode -1)
 (tool-bar-mode -1)
+
+; keyboard scroll one line at a time
+(setq scroll-step 1)

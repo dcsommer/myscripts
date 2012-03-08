@@ -28,9 +28,10 @@
 (show-paren-mode 1)
 (setq show-paren-delay 0)
 
-; turn off menubar and toolbar
+; turn off menubar, toolbar, and scrollbar
 (menu-bar-mode -1)
 (tool-bar-mode -1)
+(scroll-bar-mode -1)
 
 ; keyboard scroll one line at a time
 (setq scroll-step 1)

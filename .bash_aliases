@@ -15,5 +15,3 @@ alias .....='cd ../../../..'
 alias sshy='ssh -Y'
 alias e='emacs -nw'
 alias oc='/home/dcsommer/Documents/the-omega-project/omega_calc/obj/oc'
-
-echo hello3

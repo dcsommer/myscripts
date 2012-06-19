@@ -17,3 +17,8 @@ alias e='emacs -nw'
 alias oc='/home/dcsommer/Documents/the-omega-project/omega_calc/obj/oc'
 
 alias go='gnome-open'
+
+# git aliases
+git config --global alias.lg "log --color --graph \
+--pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset \
+%s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"

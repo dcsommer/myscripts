@@ -1,0 +1,3 @@
+[submodule ".emacs.d/expand-region"]
+	path = .emacs.d/expand-region
+	url = https://github.com/emacsmirror/expand-region.git

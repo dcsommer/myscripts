@@ -1,6 +1,6 @@
-[submodule ".emacs.d/lib/expand-region"]
-	path = .emacs.d/lib/expand-region
-	url = https://github.com/emacsmirror/expand-region.git
 [submodule ".emacs.d/lib/haskell-mode"]
 	path = .emacs.d/lib/haskell-mode
 	url = https://github.com/haskell/haskell-mode.git
+[submodule ".emacs.d/lib/expand-region"]
+	path = .emacs.d/lib/expand-region
+	url = https://github.com/emacsmirror/expand-region.git

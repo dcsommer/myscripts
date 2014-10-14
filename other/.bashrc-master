@@ -104,59 +104,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-####SEQUOIA DEVELOPMENT SECTION####
-
-sqroot=/home/dcsommer/Documents/sequoia-dev-trunk # The root dev directory
-# Must locate the xerces xml parser to build the Sequoia compiler
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$sqroot/src/external/xercesc/lib
-
-# Needed to compile Sequoia files. We add a few things to the path and set
-# some environment variables.
-export PATH=$PATH:$sqroot/bin                     # The location of the sq++ binary
-export SQ_RT_DIR=$sqroot/runtime                  # Paths that generated code will
-export SQ_LD_DIR=$sqroot/apps/external            #   assume to exist
-
-function doresearch {
-    cd ~/Documents
-    gedit notes.txt &
-    cd sequoia-dev-trunk
-    emacs src/common/gsop/src/target/generic_target_vector.cc &
-    emacs src/common/berkeley/src/elsa/cc.ast.gen.h &
-    emacs runtime/vector/include/sq_vector_intrinsics.h &
-}
-
-function makesequoia {
-    cd ~/Documents/sequoia-dev-trunk
-    rm bin/sqcc
-    make
-    cd -
-}
-
-function benchmark-sequoia-app {
-    cd out
-    echo "Running 4 warmup runs"
-    for i in {1..4}
-    do
-        ./sq.out
-    done
-    echo "Collecting data for 10 runs"
-    for i in {1..10}
-    do
-        ./sq.out | grep "running time:" >> experiments.txt
-    done
-    echo "experiment_name,usec,GFLOPS,GB/s" > experiments2.txt
-#Example line in experiments.txt:
-#Sequoia total matrixmult running time: 588125.0000 usec -- 0.0571 GFLOPS -- 0.0008 GB/s
-    awk '/Sequoia total / {print $3 "," $6 "," $9 "," $12}
-     END {}' experiments.txt >> experiments2.txt
-    rm experiments.txt
-    mv experiments2.txt ../experiments.txt
-}
-
-####END SEQUOIA DEVELOPMENT SECTION####
-
 # My own custom development helpers
 function grepheaders {
     grep --include="*.h" -ri $1 *
 }
-export CLASSPATH=/home/dcsommer/Dropbox/Documents/2010-2011/Winter/cs255/proj2_trunk
+

@@ -5,7 +5,7 @@ BEGIN_DIR=$(pwd)
 # Script to run to setup a fresh install of ubuntu with my scripts, programs, etc.
 
 sudo apt-get install git ubuntu-restricted-extras vlc python3 bpython \
-    emacs synapse compiz-plugins-main compizconfig-settings-manager \
+    emacs compiz-plugins-main compizconfig-settings-manager \
     clementine pidgin pidgin-otr deluge nautilus-open-terminal
 
 # Thanks: http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in

@@ -104,6 +104,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+export EDITOR=emacs
+
 # My own custom development helpers
 function grepheaders {
     grep --include="*.h" -ri $1 *

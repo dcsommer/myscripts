@@ -4,3 +4,6 @@
 [submodule "dotfiles/.emacs.d/lib/haskell-mode"]
 	path = dotfiles/.emacs.d/lib/haskell-mode
 	url = https://github.com/haskell/haskell-mode.git
+[submodule "dotfiles/.emacs.d/lib/gomode"]
+	path = dotfiles/.emacs.d/lib/gomode
+	url = https://github.com/dominikh/go-mode.el.git

@@ -7,6 +7,9 @@
 ;;; Soft Tabs ;;;
 (setq-default indent-tabs-mode nil)
 
+;;; If using hard tabs, make them 2 spaces ;;;
+(setq-default tab-width 2)
+
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -30,8 +33,10 @@
 
 ; turn off menubar, toolbar, and scrollbar
 (menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
+(if (boundp 'tool-bar-mode)
+    (tool-bar-mode -1))
+(if (boundp 'scroll-bar-mode)
+    (scroll-bar-mode -1))
 
 ; keyboard scroll one line at a time
 (setq scroll-step 1)

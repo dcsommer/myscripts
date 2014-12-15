@@ -10,10 +10,13 @@
 ; haskell major mode
 (load "haskell-site-file")
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
- ;; NOTE: Can only use 1 indentation mode at a time
+;; NOTE: Can only use 1 indentation mode at a time
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
+
+;; gofmt Go code before saving
+(require 'go-mode-autoloads)
 
 ; expand region
 (require 'expand-region)

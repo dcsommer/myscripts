@@ -15,8 +15,9 @@
 ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
 
-;; gofmt Go code before saving
+;; Add Go mode and run gofmt on Go code before saving
 (require 'go-mode-autoloads)
+(add-hook 'before-save-hook #'gofmt-before-save)
 
 ; expand region
 (require 'expand-region)

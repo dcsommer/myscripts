@@ -55,6 +55,8 @@
 (global-set-key (kbd "M-<right>") 'select-next-window)
 (global-set-key (kbd "M-<left>")  'select-previous-window)
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;; For tags
 (defun create-tags (dir-name)
   "Create tags file."

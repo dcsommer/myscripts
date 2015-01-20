@@ -105,9 +105,9 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 export EDITOR=emacs
+export PATH=$PATH:~/bin
 
 # My own custom development helpers
 function grepheaders {
     grep --include="*.h" -ri $1 *
 }
-

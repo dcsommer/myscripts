@@ -6,7 +6,8 @@ BEGIN_DIR=$(pwd)
 
 sudo apt-get install git ubuntu-restricted-extras vlc python3 bpython \
     emacs compiz-plugins-main compizconfig-settings-manager \
-    clementine pidgin pidgin-otr deluge nautilus-open-terminal
+    clementine pidgin pidgin-otr deluge nautilus-open-terminal \
+    gparted
 
 # Thanks: http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in
 SCRIPT_DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -26,7 +27,7 @@ do
     fi
     remove=$HOME"/"$file
     link_here=$SCRIPT_DIR"/"$subdir$file
-    echo "Removing" $remove 
+    echo "Removing" $remove
     rm $remove -rf
     echo "Creating symbolic link from" $remove "to" $link_here
     ln -f -s $link_here $remove

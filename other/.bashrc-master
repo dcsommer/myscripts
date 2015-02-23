@@ -106,6 +106,7 @@ fi
 
 export EDITOR="emacs -nw"
 export PATH=$PATH:~/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
 # My own custom development helpers
 function grepheaders {

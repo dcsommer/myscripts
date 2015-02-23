@@ -1,9 +1,11 @@
+; Recursively add all subpaths to the load-path
 (add-to-list 'load-path (file-name-directory load-file-name))
 (let ((default-directory (concat (file-name-directory load-file-name) "lib/")))
   (normal-top-level-add-subdirs-to-load-path))
 
-; my standard preferences, look and feel, etc
-(load "misc")
+; my standard preferences, look and feel, etc. (can't be named plain
+; "misc", since that conflicts with a built-in emacs package)
+(load "my-misc")
 ; matlab major mode
 (load "matlab")
 (setq auto-mode-alist (cons '("\\.m$" . matlab-mode) auto-mode-alist))
@@ -15,9 +17,13 @@
 ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
 
-;; Add Go mode and run gofmt on Go code before saving
+; Add Go mode and run gofmt on Go code before saving
 (require 'go-mode-autoloads)
 (add-hook 'before-save-hook #'gofmt-before-save)
+
+; Add Rust mode
+(autoload 'rust-mode "rust-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
 ; expand region
 (require 'expand-region)

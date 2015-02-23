@@ -7,3 +7,6 @@
 [submodule "dotfiles/.emacs.d/lib/gomode"]
 	path = dotfiles/.emacs.d/lib/gomode
 	url = https://github.com/dominikh/go-mode.el.git
+[submodule "dotfiles/.emacs.d/lib/rust-mode"]
+	path = dotfiles/.emacs.d/lib/rust-mode
+	url = git@github.com:rust-lang/rust-mode.git

@@ -8,8 +8,8 @@
 ; matlab major mode
 (load "matlab")
 (setq auto-mode-alist (cons '("\\.m$" . matlab-mode) auto-mode-alist))
-; haskell major mode
-(load "haskell-site-file")
+; haskell major mode -- off for now, its not working
+;(load "haskell-site-file")
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 ;; NOTE: Can only use 1 indentation mode at a time
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)

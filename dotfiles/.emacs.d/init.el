@@ -1,7 +1,6 @@
 ; Recursively add all subpaths to the load-path
-(add-to-list 'load-path (file-name-directory load-file-name))
-(let ((default-directory (concat (file-name-directory load-file-name) "lib/")))
-  (normal-top-level-add-subdirs-to-load-path))
+(let ((default-directory "~/.emacs.d"))
+    (normal-top-level-add-subdirs-to-load-path))
 
 ; my standard preferences, look and feel, etc. (can't be named plain
 ; "misc", since that conflicts with a built-in emacs package)

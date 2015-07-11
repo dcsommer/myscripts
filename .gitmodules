@@ -1,12 +1,12 @@
-[submodule "dotfiles/.emacs.d/lib/expand-region"]
-	path = dotfiles/.emacs.d/lib/expand-region
+[submodule "dotfiles/.emacs.d/lisp/lib/expand-region"]
+	path = dotfiles/.emacs.d/lisp/expand-region
 	url = https://github.com/emacsmirror/expand-region.git
-[submodule "dotfiles/.emacs.d/lib/haskell-mode"]
-	path = dotfiles/.emacs.d/lib/haskell-mode
+[submodule "dotfiles/.emacs.d/lisp/lib/haskell-mode"]
+	path = dotfiles/.emacs.d/lisp/haskell-mode
 	url = https://github.com/haskell/haskell-mode.git
-[submodule "dotfiles/.emacs.d/lib/gomode"]
-	path = dotfiles/.emacs.d/lib/gomode
+[submodule "dotfiles/.emacs.d/lisp/lib/gomode"]
+	path = dotfiles/.emacs.d/lisp/gomode
 	url = https://github.com/dominikh/go-mode.el.git
-[submodule "dotfiles/.emacs.d/lib/rust-mode"]
-	path = dotfiles/.emacs.d/lib/rust-mode
+[submodule "dotfiles/.emacs.d/lisp/lib/rust-mode"]
+	path = dotfiles/.emacs.d/lisp/rust-mode
 	url = git@github.com:rust-lang/rust-mode.git

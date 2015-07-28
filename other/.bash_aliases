@@ -36,3 +36,5 @@ function gitinit {
     git init
     git commit --allow-empty -m 'Initial empty commit'
 }
+
+alias clbin="curl -F 'clbin=<-' https://clbin.com | tee /dev/tty | xclip"

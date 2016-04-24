@@ -23,6 +23,7 @@ alias gb='git branch'
 alias gsno='git show --name-only'
 alias gri='git rebase -i'
 alias gca='git commit -a --amend --no-edit'
+alias gf='git fetch; git rebase origin/master'
 
 # git aliases
 git config --global alias.lg "log --color --graph \

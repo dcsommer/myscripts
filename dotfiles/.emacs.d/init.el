@@ -1,3 +1,6 @@
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+
 ; Recursively add all subpaths to the load-path
 (let ((default-directory "~/.emacs.d"))
     (normal-top-level-add-subdirs-to-load-path))
@@ -23,6 +26,13 @@
 ; Add Rust mode
 (autoload 'rust-mode "rust-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
+
+; Configure Racer for Rust code completion to start when Rust mode does
+(add-hook 'rust-mode-hook #'racer-mode)
+(add-hook 'racer-mode-hook #'eldoc-mode)
+(add-hook 'racer-mode-hook #'company-mode)
+(global-set-key (kbd "TAB") #'company-indent-or-complete-common)
+(setq company-tooltip-align-annotations t)
 
 ; expand region
 (require 'expand-region)

@@ -18,6 +18,10 @@ alias ........='cd ../../../../../../..'
 alias sshy='ssh -Y'
 alias e='emacs -nw'
 
+# hg
+alias hgca='hg commit --amend -M .'
+alias hgsno='hg status --rev .~1:.'
+
 # git
 alias gb='git branch'
 alias gsno='git show --name-only'

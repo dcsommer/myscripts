@@ -43,12 +43,12 @@
 
 ; easy window switching
 (defun select-next-window ()
-  "Switch to the next window" 
+  "Switch to the next window"
   (interactive)
   (select-window (next-window)))
 
 (defun select-previous-window ()
-  "Switch to the previous window" 
+  "Switch to the previous window"
   (interactive)
   (select-window (previous-window)))
 
@@ -61,20 +61,20 @@
 (defun create-tags (dir-name)
   "Create tags file."
   (interactive "DDirectory: ")
-  (eshell-command 
+  (eshell-command
    (format "find %s -type f -name \"*.[ch]\" | etags -" dir-name)))
 
 ;; Auto refresh of the tags file
-  ;;;  Jonas.Jarnestrom<at>ki.ericsson.se A smarter               
+  ;;;  Jonas.Jarnestrom<at>ki.ericsson.se A smarter
   ;;;  find-tag that automagically reruns etags when it cant find a
-  ;;;         
+  ;;;
   ;;;  requested item and then makes a new try to locate it.
-  ;;;         
-  ;;;  Fri Mar 15 09:52:14 2002    
+  ;;;
+  ;;;  Fri Mar 15 09:52:14 2002
 
 (defadvice find-tag (around refresh-etags activate)
   "Rerun etags and reload tags if tag not found and redo find-tag.
-         
+
    If buffer is modified, ask about save before running etags."
   (let ((extension (file-name-extension (buffer-file-name))))
     (condition-case err
@@ -91,5 +91,5 @@
   (interactive)
   (shell-command (format "etags *.%s" (or extension "el")))
   (let ((tags-revert-without-query t))  ; don't query, revert silently
-                                        ;      
+                                        ;
     (visit-tags-table default-directory nil)))

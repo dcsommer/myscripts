@@ -5,7 +5,6 @@
 [profiles]
   [[default]]
     background_image = None
-    show_titlebar = False
 [layouts]
   [[default]]
     [[[child1]]]

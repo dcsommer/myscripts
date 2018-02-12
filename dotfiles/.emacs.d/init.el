@@ -1,3 +1,10 @@
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
@@ -19,10 +26,6 @@
 ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
 
-; Add Go mode and run gofmt on Go code before saving
-(require 'go-mode-autoloads)
-(add-hook 'before-save-hook #'gofmt-before-save)
-
 ; Add Rust mode
 (autoload 'rust-mode "rust-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
@@ -33,8 +36,3 @@
 (add-hook 'racer-mode-hook #'company-mode)
 (global-set-key (kbd "TAB") #'company-indent-or-complete-common)
 (setq company-tooltip-align-annotations t)
-
-; expand region
-(require 'expand-region)
-(global-set-key (kbd "C-=") 'er/expand-region)
-; TODO figure out why above doesn't work in -nw mode

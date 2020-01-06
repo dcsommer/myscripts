@@ -20,7 +20,7 @@ alias e='emacs -nw'
 
 # hg
 alias hgca='hg commit --amend -M .'
-alias hgsno='hg status --rev .~1:.'
+alias hgsno='hg status --rev .~1::.'
 
 # git
 alias gb='git branch'

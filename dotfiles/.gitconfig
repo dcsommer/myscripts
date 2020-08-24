@@ -1,6 +1,6 @@
 [user]
 	name = Daniel Sommermann
-	email = dcsommer@whatsapp.com
+	email = dcsommer@gmail.com
 [alias]
 	lol = log --graph --decorate --oneline
 	lola = log --graph --decorate --oneline --all

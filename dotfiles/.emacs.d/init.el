@@ -26,6 +26,12 @@
 ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
 
+;; Configure Major Modes for FB/custom extensions
+(add-to-list 'auto-mode-alist '("\\.td\\'" . python-mode))
+(add-to-list 'auto-mode-alist '("\\.bzl\\'" . python-mode))
+(add-to-list 'auto-mode-alist '("BUCK\\'" . python-mode))
+(add-to-list 'auto-mode-alist '("TARGETS\\'" . python-mode))
+
 ; Add Rust mode
 (autoload 'rust-mode "rust-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))

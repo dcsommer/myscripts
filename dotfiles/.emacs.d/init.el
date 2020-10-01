@@ -15,9 +15,6 @@
 ; my standard preferences, look and feel, etc. (can't be named plain
 ; "misc", since that conflicts with a built-in emacs package)
 (load "my-misc")
-; matlab major mode
-(load "matlab")
-(setq auto-mode-alist (cons '("\\.m$" . matlab-mode) auto-mode-alist))
 ; haskell major mode -- off for now, its not working
 ;(load "haskell-site-file")
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)

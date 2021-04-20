@@ -1,3 +1,5 @@
 dotfiles/.emacs.d/auto-save-list/*
+dotfiles/.emacs.d/elpa/*
+dotfiles/.emacs.d/srecode-map.el
 *.elc
 *~

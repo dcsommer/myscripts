@@ -26,6 +26,9 @@
 ;; Configure Major Modes for FB/custom extensions
 (add-to-list 'auto-mode-alist '("\\.td\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.bzl\\'" . python-mode))
+(add-to-list 'auto-mode-alist '("\\.cinc\\'" . python-mode))
+(add-to-list 'auto-mode-alist '("\\.cconf\\'" . python-mode))
+(add-to-list 'auto-mode-alist '("\\.sky\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("BUCK\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("TARGETS\\'" . python-mode))
 
